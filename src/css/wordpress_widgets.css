@@ -1,0 +1,175 @@
+/*
+*
+* CALENDAR WIDGET
+*
+*/
+#wp-calendar {
+  width: 100%;
+}
+#wp-calendar thead th {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+#wp-calendar tbody td {
+  text-align: center;
+  border: 1px solid #ddd;
+  line-height: 2.5em;
+  transition: background 0.15s ease;
+  -webkit-transition: background 0.15s ease;
+  -o-transition: background 0.15s ease;
+  -moz-transition: background 0.15s ease;
+  color: #888888;
+}
+#wp-calendar tbody td:hover { background: #f1f1f1; color: #333; }
+#wp-calendar tbody td a { display: block; text-decoration: none; background: #f1f1f1; color: #333; }
+#wp-calendar tbody td:hover a { background: #4d4d4d; color: #fff; }
+#wp-calendar tfoot td { padding-top: 1px; padding: 4px; }
+#wp-calendar caption {
+  cursor: pointer;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 12px;
+  outline: 0 none !important;
+  background: #222222;
+}
+#wp-calendar tbody a { display: block; text-decoration: underline; }
+#wp-calendar th { text-align: center; border: 1px solid transparent; border-top: none; padding: 7px 0; color: #a7a7a7; }
+#footer #wp-calendar thead th { background: #222 }
+#footer #wp-calendar tbody td { border-color: #222 }
+/*
+*
+* RECENT COMMENTS WIDGET
+*
+*/
+#recentcomments{list-style: none; padding: 0px;}
+.recentcomments{margin-bottom: 5px; border-bottom: 1px solid #ccc;}
+.comment-author-link{font-weight: bold;}
+/*
+*
+* RECENT POSTS WIDGET
+*
+*/
+.post-date{font-weight: bold;}
+/*
+*
+* TEXT WIDGET
+*
+*/
+.textwidget{}
+/*
+*
+* DROPDOWN ARCHIVE WIDGET
+*
+*/
+.screen-reader-text{
+  display: none;
+}
+select[name="archive-dropdown"] {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+/*
+*
+* CATEGORIES WIDGET
+*
+*/
+.postform {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+/*
+*
+* TAGS CLOUD WIDGET
+*
+*/
+.tagcloud{}
+.tag-cloud-link{}
+.tag-cloud-link:hover{}
+.tag-link-count{}
+/*
+*
+* SEARCH WIDGET
+*
+*/
+.search-form label{
+  width: 100%;
+}
+.search-field{
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.search-submit{
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+/*
+*
+* MENU WIDGET
+*
+*/
+.menu{}
+.sub-menu{
+  margin-left: 5px;
+}
+.menu-item{}
