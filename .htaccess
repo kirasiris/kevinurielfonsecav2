@@ -1,0 +1,2 @@
+# Option 1 to protect EDD files:
+rewrite ^/wp-content/uploads/edd/(.*)\.zip$ / permanent;
