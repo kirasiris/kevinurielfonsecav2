@@ -79,6 +79,7 @@
         'superhero' =>  'Superhero',
         'united'    =>  'United',
         'yeti'      =>  'Yeti',
+        'hacker'    =>  'Hacker'
       )
     )));
     /*
