@@ -20,6 +20,8 @@
         the_terms( $post->ID, 'download_tag', 'Tags: ', ', ', '' );
       }
       ?>
+      <br/>
+      <a href="https://wordpress.com/refer-a-friend/AgJ8XA6iNz1XmnGwkWYQ/" target="_blank" rel="noreferrer noopener" class="btn btn-link btn-sm" style="margin-top: 5px;">Create a WordPress Blog!</a>
     </div>
   </div>
   <hr>

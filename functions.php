@@ -52,31 +52,6 @@ add_action('after_setup_theme','wpb_theme_setup');
 
 /*
 *
-* FEATURED IMAGE ON REST API
-*
-*/
-
-add_action('rest_api_init', 'register_rest_images' );
-function register_rest_images(){
-    register_rest_field( array('post'),
-        'fimg_url',
-        array(
-            'get_callback'    => 'get_rest_featured_image',
-            'update_callback' => null,
-            'schema'          => null,
-        )
-    );
-}
-function get_rest_featured_image( $object, $field_name, $request ) {
-    if( $object['featured_media'] ){
-        $img = wp_get_attachment_image_src( $object['featured_media'], 'app-thumb' );
-        return $img[0];
-    }
-    return false;
-}
-
-/*
-*
 * NO FEATURED IMAGE?
 *
 */
@@ -405,3 +380,71 @@ function wpb_init_widgets($id){
 }
 
 add_action('widgets_init', 'wpb_init_widgets');
+
+/*
+*
+* REST API
+*
+*/
+
+// Featured Image
+add_action('rest_api_init', 'register_rest_images' );
+
+if(! function_exists('register_rest_images')) {
+  function register_rest_images() {
+    register_rest_field(array('post'), 'fimg_url',
+                        array(
+                          'get_callback'    => 'get_rest_featured_image',
+                          'update_callback' => null,
+                          'schema'          => null,
+                        )
+                       );
+  }
+  
+  function get_rest_featured_image( $object, $field_name, $request ) {
+    if( $object['featured_media'] ){
+      $img = wp_get_attachment_image_src( $object['featured_media'], 'app-thumb' );
+      return $img[0];
+    }
+    return false;
+  }
+}
+
+// Category name
+add_action( 'rest_api_init', 'register_rest_category_name'); 
+
+if (! function_exists( 'register_rest_category_name' )) {
+  function register_rest_category_name() {
+    register_rest_field(array('post'), 'category_name',
+                        array(
+                          'get_callback'	=> 'get_category_name',
+                          'update_callback'	=> null,
+                          'schema'			=> null
+                        ));
+
+    }
+  
+    function get_category_name( $object ) {
+      $category = get_the_category($object[ 'id' ]);
+      return $category[0]->cat_name;
+    }
+}
+
+// Preview link
+add_action( 'rest_api_init', 'add_custom_fields' );
+
+if(! function_exists('register_rest_preview_link')) {
+	function register_rest_preview_link() {
+		register_rest_field(array('post', 'download'), 'preview_link',
+							array(
+								'get_callback'    => 'get_preview_link',
+								'update_callback' => null,
+								'schema'          => null,
+							));
+	}
+	
+	function get_preview_link( $object, $field_name, $request ) {
+		//your code goes here
+		return $customfieldvalue;
+	}
+}

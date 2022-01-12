@@ -1,2 +1,6 @@
 # Option 1 to protect EDD files:
 rewrite ^/wp-content/uploads/edd/(.*)\.zip$ / permanent;
+# Protect site against ClickJacking
+Header always append X-Frame-Options SAMEORIGIN
+# Protect site against drive-by-downloads
+Header set X-Content-Type-Options nosniff
