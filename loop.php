@@ -26,4 +26,15 @@
       </div>
     </div>
   </article>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7136941557526274"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-5z+bt+j-10+i1"
+     data-ad-client="ca-pub-7136941557526274"
+     data-ad-slot="3359520348"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <?php endwhile; ?>

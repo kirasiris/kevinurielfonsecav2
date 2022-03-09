@@ -95,6 +95,22 @@ function preview_link($postID){
 	}
 	return $demostracion_url;
 }
+
+/*
+*
+* GITHUB REPO CUSTOM FIELD
+*
+*/
+function github_repository_readme($postID){
+	$GitHubRepository_url = 'github_repository_readme';
+	$GitHubRepository_readMe = get_post_meta($postID, $GitHubRepository_url, true);
+	if($GitHubRepository_readMe==''){
+		delete_post_meta($postID,$GitHubRepository_url);
+		add_post_meta($postID,$GitHubRepository_url, '#');
+		return '#';
+	}
+	return $GitHubRepository_readMe;
+}
 /*
 *
 * SEARCH FUNCTION. THE SEARCH INPUT WILL ONLY LOOK FOR THE KEYWORK IN THE SPECIFIED POSTS
@@ -430,21 +446,28 @@ if (! function_exists( 'register_rest_category_name' )) {
     }
 }
 
-// Preview link
-add_action( 'rest_api_init', 'add_custom_fields' );
+// GitHub Repository ReadMe
+add_action( 'rest_api_init', 'register_rest_github_repository_reamde' );
 
-if(! function_exists('register_rest_preview_link')) {
-	function register_rest_preview_link() {
+if(! function_exists('register_rest_github_repository_reamde')) {
+	function register_rest_github_repository_reamde() {
 		register_rest_field(array('post', 'download'), 'preview_link',
 							array(
-								'get_callback'    => 'get_preview_link',
+								'get_callback'    => 'get_github_repository_readme',
 								'update_callback' => null,
 								'schema'          => null,
 							));
 	}
 	
-	function get_preview_link( $object, $field_name, $request ) {
+	function get_github_repository_readme( $object, $field_name, $request ) {
 		//your code goes here
-		return $customfieldvalue;
+    $GitHubRepository_url = 'github_repository_readme';
+    get_post_meta($object['id'], $GitHubRepository_url, true);
+		if($GitHubRepository_readMe==''){
+      delete_post_meta($postID,$GitHubRepository_url);
+      add_post_meta($postID,$GitHubRepository_url, '#');
+      return '#';
+    }
+    return $GitHubRepository_readMe;
 	}
 }
