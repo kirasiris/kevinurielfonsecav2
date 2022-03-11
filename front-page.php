@@ -24,9 +24,7 @@
                   <?php endif; ?>
                   <?php if(is_active_sidebar('front_page')) {
         	          dynamic_sidebar('front_page');
-        	        }
-                  ?>
-                <?php else : ?>
+        	        } else : ?>
                   <a href="<?= admin_url() ?>" class="btn btn-info btn-md">Administration</a>
                 <?php endif;?>
             </div>

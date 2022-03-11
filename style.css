@@ -121,6 +121,12 @@ article img {
 	margin-bottom: 10px;
 	margin-right: 10px;
 }
+
+ol.wp-block-latest-comments {
+	margin-left: -4rem !important;
+	margin-right: 4rem;
+}
+
 /*
 *
 * TAG CLOUD
