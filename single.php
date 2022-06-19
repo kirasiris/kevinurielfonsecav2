@@ -9,6 +9,7 @@
       <div class="col-md-8 content-area">
           <article class="<?php the_ID().the_slug(); ?>" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
             <?php the_content(); ?>
+            <?php include('includes/amazon_ads.php') ?>
           </article>
       </div>
       <!-- Section: Sidebar -->
