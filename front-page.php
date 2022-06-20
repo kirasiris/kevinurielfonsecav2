@@ -22,10 +22,11 @@
                   <?php if(get_theme_mod ('btn_text_third', 'Get Started') != '') : ?>
                     <a class="btn btn-default btn-md" href="<?php echo get_theme_mod('btn_url_third', '#'); ?>"><?php echo get_theme_mod('btn_text_third', 'Get Started'); ?></a>
                   <?php endif; ?>
-                  <?php if(is_active_sidebar('front_page')) {
-        	          dynamic_sidebar('front_page');
-        	        } else : ?>
-                  <a href="<?= admin_url() ?>" class="btn btn-info btn-md">Administration</a>
+                  <?php if(is_active_sidebar('front_page')) : ?>
+                    	<?php dynamic_sidebar('front_page')  ?>
+					        <?php else : ?>
+						          <a href="<?= admin_url() ?>" class="btn btn-info btn-md">Administration</a>
+                  <?php endif; ?>
                 <?php endif;?>
             </div>
         </div>
