@@ -5,7 +5,7 @@
   <?php if(have_posts()) : the_post(); ?>
     <!-- Section: Meta -->
     <?php include('includes/meta.php'); ?>
-    <div class="row">
+    <div class="row content-area content-row">
       <!-- Section: Container -->
       <div class="col-md-7">
           <article class="<?php the_ID().the_slug(); ?>" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
